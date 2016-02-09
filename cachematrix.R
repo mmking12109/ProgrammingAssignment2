@@ -1,11 +1,12 @@
 ## Cache the inverse of a matrix
 
-## Do the caching
+## Create a list object for caching the inverse matrix.
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
   
   set <- function(y) {
     x <<- y
+    i <<- NULL
   }
   get <- function() x
   
@@ -17,7 +18,10 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
-## Get the stuff from the cache
+## Find the inverse of the matrix using the list
+# created above.
+## If the list doesn't have a cached inverse,
+## find the inverse and cache it.
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
   i <- x$getinverse()
