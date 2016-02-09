@@ -19,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 ## Find the inverse of the matrix using the list
-# created above.
+## created above.
 ## If the list doesn't have a cached inverse,
 ## find the inverse and cache it.
 cacheSolve <- function(x, ...) {
